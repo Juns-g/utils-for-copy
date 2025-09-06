@@ -1,3 +1,3 @@
 const testFn = () => {
-  console.log('This is a test function.')
-}
+	console.log("This is a test function.");
+};
