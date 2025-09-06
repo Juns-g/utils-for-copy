@@ -1,5 +1,9 @@
-import { attemptAsync } from "@/ts/attemptAsync";
+/** biome-ignore-all lint/suspicious/noExplicitAny: <11> */
+/** biome-ignore-all lint/correctness/noUnusedVariables: <11> */
+/** biome-ignore-all lint/style/useConst: <11> */
+
 import { describe, expect, it } from "vitest";
+import { attemptAsync } from "@/ts/attemptAsync";
 
 describe("Await to test", async () => {
 	it("should return a value when resolved", async () => {
@@ -38,11 +42,13 @@ describe("Await to test", async () => {
 	});
 
 	it("should receive the type of the parent if no type was passed", async () => {
-		let user: { name: string };
-		let err: Error;
+		let user: { name: string } | undefined;
+		let err: Error | null;
 
-		[err, user] = await attemptAsync(Promise.resolve({ name: "123" }));
+		[err, user] = await attemptAsync<{ name: string }>(
+			Promise.resolve({ name: "123" }),
+		);
 
-		expect(user.name).toEqual("123");
+		expect(user?.name).toEqual("123");
 	});
 });

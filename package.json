@@ -1,31 +1,31 @@
 {
-  "name": "utils-for-copy",
-  "version": "1.0.0",
-  "description": "Personal front-end utils, for copying use only",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "test": "vitest",
-    "lint": "biome lint .",
-    "format": "biome format --write .",
-    "commit": "git add . && gitmoji -c && git push",
-    "prepare": "husky"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.2.3",
-    "@types/node": "^24.3.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.1.6",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4",
-    "vitest": "^3.2.4"
-  },
-  "keywords": [],
-  "author": "juns",
-  "license": "ISC",
-  "packageManager": "pnpm@10.11.0",
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx,json,css,scss,md}": "biome format --write --no-errors-on-unmatched"
-  }
+	"name": "utils-for-copy",
+	"version": "1.0.0",
+	"description": "Personal front-end utils, for copying use only",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"test": "vitest",
+		"lint": "biome lint .",
+		"format": "biome format --write .",
+		"commit": "git add . && gitmoji -c && git push",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.3",
+		"@types/node": "^24.3.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.6",
+		"typescript": "^5.9.2",
+		"vite": "^7.1.4",
+		"vitest": "^3.2.4"
+	},
+	"keywords": [],
+	"author": "juns",
+	"license": "ISC",
+	"packageManager": "pnpm@10.11.0",
+	"lint-staged": {
+		"*.{js,ts,jsx,tsx,json,css,scss,md}": "biome format --write --no-errors-on-unmatched"
+	}
 }
